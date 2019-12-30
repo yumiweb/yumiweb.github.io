@@ -1,0 +1,232 @@
+<div id="placeholder">
+    <div id="header" class="no-select">
+        <img id="header-icon" src="assets/img/content-nav/icon/pay.svg">
+        <a id="header-title">QUICK PAY</a>
+    </div>
+    <div id="placeholder-2" class="no-select">
+        In a hurry? No worries, pay directly here. 
+    </div>
+    <div id="content-view-2" class="font-google-sans transition">
+        <div id="placeholder-3">
+            <div id="pay-card">
+                <form onSubmit="return securePay();">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="account">
+                                    ACCOUNT NO
+                                </label>
+                            </td>
+                            <td>
+                                <input name="account" id="account" class="transition" type="text" placeholder="Phone or Account number" maxlength="12" autofocus required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="amount">
+                                    AMOUNT
+                                </label>
+                            </td>
+                            <td>
+                                RM
+                                <input name="amount" id="amount" class="transition" type="number" placeholder="50" step="5" min="10" max="1000" required >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="payment">
+                                    PAYMENT TYPE
+                                </label>
+                            </td>
+                            <td>
+                                <select name="payment" id="payment" class="transition" required >
+                                    <option value="">Choose one</option>
+                                    <option value="ibk">Online Banking</option>
+                                    <option value="card">Card</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="boost">Boost</option>
+                                    <option value="tng">Touch n Go</option>
+                                </select>
+                            <td>
+                        </tr>
+                    </table>
+                    <div id="foot">
+                        <div id="pay-status"></div>
+                        <input id="submit" class="pointer" type="submit" value="PAY">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #content-view{
+        background-image: url(assets/img/content-view/background/pay.jpg);
+        background-position: center;
+    }
+
+    #placeholder {
+        width: -webkit-fill-available;
+        height: max-content;
+        /* background-image: url(assets/docs/plan/res/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        background-attachment: fixed; */
+    }
+
+    #header {
+        background: #fffffff2;
+        padding: 20px;
+        display: flex;
+        font-size: 27px;
+        width: -webkit-fill-available;
+        align-items: center;
+        /* position: sticky; */
+        justify-content: center;
+        top: 0;
+    }
+
+    #header-icon {
+        opacity: 0.8;
+        padding-right: 14px;
+        max-width: 25px;
+    }
+
+    #header-title {
+        font-family: 'Megrim', cursive;
+    }
+
+    #placeholder-2 {
+        width: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 40px; */
+        justify-content: center;
+        background: #fffffff2;
+        text-align: center;
+        font-size: 17px;
+        padding-bottom: 20px;
+    }
+
+    #content-view-2 {
+        min-height: calc(100vh - 170px);
+        /* min-height: calc(100vh - 150.84px); */
+        height: max-content;
+    }
+
+    @media only screen and (max-width: 639px) {
+        #placeholder{
+            background: rgba(0,0,0,0.35);
+        }
+
+        #header{
+            padding-bottom: 12px;
+        }
+
+        #placeholder-2 {
+            padding: 5px 20px 20px 20px;
+        }
+
+    }
+</style>
+
+<style>
+    #placeholder-3{
+        display: flex;
+        width: -webkit-fill-available;
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #pay-card{
+        background: #ffffffe3;
+        border-radius: 20px;
+        height: max-content;
+        padding: 20px;
+    }
+
+    form{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: flex-end; */
+    }
+
+    form input{
+        background: none;
+        -webkit-appearance: unset;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid lightgray !important;
+    }
+
+    form input:focus{
+        border-bottom: 1px solid black !important;
+    }
+
+    form select{
+        background: none;
+        -webkit-appearance: unset;
+        outline: none;
+        border: none;
+        width: -webkit-fill-available;
+        /* border-bottom: 1px solid lightgray !important; */
+    }
+
+    form select:focus{
+        border-bottom: 1px solid black !important;
+    }
+    
+    form tr{
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form td{
+        /* padding: 2px 10px; */
+    }
+
+    form #submit{
+        transition: all 0.2s ease-in-out;
+        padding: 10px 25px;
+        width: max-content;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 0px #0000004f;
+    }
+
+    form #submit:hover{
+        box-shadow: 0px 0px 20px 4px #0000004f;
+    }
+
+    form #submit:focus{
+        box-shadow: 0px 0px 5px 0px #0000004f;
+        border: none !important;
+    }
+
+    #pay-card #foot{
+        display: flex;
+        flex-direction: row;
+        width: -webkit-fill-available;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #pay-card #pay-status{
+        color: red;
+        padding-right: 15px;
+        max-width: 120px;
+        text-align: right;
+        line-height: 15px;
+    }
+
+    @media only screen and (max-width: 639px) {
+    
+    }
+</style>

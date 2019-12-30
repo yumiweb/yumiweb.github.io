@@ -1,0 +1,96 @@
+<!-- This is a comment -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Enforce HTTPS
+        <script type="application/javascript">
+            {
+                var loc = window.location.href+'';
+                if (loc.indexOf('http://')==0 && window.location.hostname.search('localhost')=='-1' && window.location.hostname.search('10.0.1')=='-1'){
+                window.location.href = loc.replace('http://','https://');}
+            }
+        </script> -->
+
+        <!-- Meta Tags -->
+        <title>YUMI</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="meta desc" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta property="og:site_name" content="yumi" />
+        <meta property="og:title" content="YUMI" />
+        <meta property="og:description" content="description" />
+        <meta property="og:url" content="#" />
+        <meta property="og:image" content="localhost/assets/img/icon.png" />
+
+        <!-- Disable browser-side caching (doesn't seem to work tho ._.) -->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- Local Assets -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="icon" href="assets/img/icon.png">
+        <script src="assets/js/main.js"></script>
+
+    </head>
+
+    <body onload="initSite();">
+        <!-- Navigation Bar -->
+        <nav id="nav">
+            <a id="nav-title" href="" class="no-text-deco font-google-sans no-select">YUMI 
+                <!-- <a id="nav-title-2" class="no-select">xxx</a> -->
+            </a>
+            <div id="nav-placeholder" class="font-google-sans no-select">
+                <a onclick="initContent('main')" id="nav-button-1" class="nav-button nav-button-secondary transition no-text-deco pointer" >HOME</a>
+                <a onclick="initContent('plan')" id="nav-button-2" class="nav-button nav-button-secondary transition no-text-deco pointer" >PLAN</a>
+                <a onclick="initContent('addon')" id="nav-button-3" class="nav-button nav-button-secondary transition no-text-deco pointer" >ADD-ON</a>
+                <a onclick="initContent('pay')" id="nav-button-4" class="nav-button nav-button-secondary transition no-text-deco pointer" >PAY</a>
+                <a onclick="initContent('about')" id="nav-button-5" class="nav-button nav-button-secondary transition no-text-deco pointer" >ABOUT US</a>
+            </div>
+            <a id="nav-login" class="nav-button nav-button-primary font-google-sans transition no-text-deco" href="dashboard">
+                LOGIN
+            </a>
+            <!-- <a id="nav-login" class="no-text-deco font-google-sans transition no-select" onclick="openDashboard();">SIGN IN</a> -->
+        </nav>
+
+        <!-- General Placeholder -->
+        <div id="content">
+            <div id="content-nav" class="no-select">
+                <div onclick="initContent('main')" id="content-nav-item-1" class="content-nav-item font-google-sans">
+                    <!-- <span class="icon icon-home"></span> -->
+                    <!-- <img class="content-nav-item-icon" src="assets/img/content-nav/home.png"> -->
+                    <span class="content-nav-item-text" >HOME</span>
+                </div>
+                <div onclick="initContent('plan')" id="content-nav-item-2" class="content-nav-item font-google-sans">
+                    <!-- <img class="content-nav-item-icon" src="assets/img/content-nav/plan.png"> -->
+                    <span class="content-nav-item-text" >PLAN</span>
+                </div>
+                <div onclick="initContent('addon')" id="content-nav-item-3" class="content-nav-item font-google-sans">
+                    <!-- <img class="content-nav-item-icon" src="assets/img/content-nav/pay.svg"> -->
+                    <span class="content-nav-item-text" >ADDON</span>
+                </div>
+                <div onclick="initContent('pay')" id="content-nav-item-4" class="content-nav-item font-google-sans">
+                    <!-- <img class="content-nav-item-icon" src="assets/img/content-nav/add-on.png"> -->
+                    <span class="content-nav-item-text" >PAY</span>
+                </div>
+                <div onclick="initContent('about')" id="content-nav-item-5" class="content-nav-item font-google-sans">
+                    <!-- <img class="content-nav-item-icon" src="assets/img/content-nav/about.png"> -->
+                    <span class="content-nav-item-text" >ABOUT</span>
+                </div>
+            </div>
+
+            <!-- Content Placeholder -->
+            <div id="content-view" class="font-google-sans transition">
+                <!-- To be filled by JS :) -->
+            </div>
+        </div>
+
+        <!-- Splash Screen -->
+        <div id="splash">
+            <div id="splash-progress">YUMI</div>
+        </div>
+    </body>
+</html>

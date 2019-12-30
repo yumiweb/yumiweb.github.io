@@ -1,0 +1,118 @@
+<div id="placeholder">
+    <div id="header" class="no-select">
+        <img id="header-icon" src="assets/img/content-nav/icon/about.png">
+        <a id="header-title">ABOUT US</a>
+    </div>
+    <div id="placeholder-2" class="no-select">
+        It's all about YUMI, the best telco provider in Malaysia!
+    </div>
+    <div id="sub-nav">
+        <div onclick="subnav_sel('about', 1);" id="sub-nav-sel-1" class="sub-nav-sel pointer">
+            ABOUT
+        </div>
+        <div onclick="subnav_sel('about', 2);" id="sub-nav-sel-2" class="sub-nav-sel pointer">
+            BOARD OF DIRECTORS
+        </div>
+        <div onclick="subnav_sel('about', 3);" id="sub-nav-sel-3" class="sub-nav-sel pointer">
+            MANAGEMENT
+        </div>
+    </div>
+    <div id="content-view-2" class="font-google-sans transition">
+        <!-- to be filled by JS -->
+    </div>
+</div>
+
+<style>
+    #content-view{
+        background-image: url(assets/img/content-view/background/about.jpg);
+        background-position: center;
+    }
+
+    #placeholder {
+        width: -webkit-fill-available;
+        height: max-content;
+        /* background-image: url(assets/docs/plan/res/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        background-attachment: fixed; */
+    }
+
+    #header {
+        background: #fffffff2;
+        padding: 20px;
+        display: flex;
+        font-size: 27px;
+        width: -webkit-fill-available;
+        align-items: center;
+        /* position: sticky; */
+        justify-content: center;
+        top: 0;
+    }
+
+    #header-icon {
+        opacity: 0.8;
+        padding-right: 14px;
+        max-width: 25px;
+    }
+
+    #header-title {
+        font-family: 'Megrim', cursive;
+    }
+
+    #placeholder-2 {
+        width: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 40px; */
+        justify-content: center;
+        background: #fffffff2;
+        text-align: center;
+        font-size: 17px;
+        padding-bottom: 20px;
+    }
+
+    #content-view-2 {
+        min-height: calc(100vh - 210px);
+        /* min-height: calc(100vh - 150.84px); */
+        height: max-content;
+        background: #00000099;
+    }
+
+    #sub-nav{
+        display: flex;
+        width: -webkit-fill-available;
+        justify-content: center;
+        align-items: center;
+        background: #00000042;
+        color: white;
+        font-size: 15px;
+        border-bottom: 1px solid #ffffff42;
+        position: sticky;
+        top: 0;
+    }
+
+    .sub-nav-sel{
+        padding: 5px 20px;
+    }
+
+    .sub-nav-sel.active{
+        border-bottom: 1px solid white;
+    }
+
+    @media only screen and (max-width: 639px) {
+        #placeholder{
+            background: rgba(0,0,0,0.35);
+        }
+
+        #header{
+            padding-bottom: 12px;
+        }
+
+        #placeholder-2 {
+            padding: 0px 20px 20px 20px;
+        }
+
+    }
+</style>

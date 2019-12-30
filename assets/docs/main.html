@@ -1,0 +1,107 @@
+<div id="placeholder">
+    <div id="card" class="no-select">
+        <div id="placeholder-2">
+            <img id="card-logo" src="assets/img/icon.png">
+            <div id="details">
+                <div id="card-info">
+                    <a href="#" id="card-name" class="no-text-deco transition">YUMI</a>
+                    "Fast like meteor"
+                </div>
+                <div id="details-child">
+                    <a>Malaysia's Top 1 Telecommunication Service Provider</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    #content{
+        height: calc(100vh - 54px);
+    }
+
+    #content-view{
+        background-image: url(assets/img/background.webp);
+        overflow: hidden !important;
+        align-items: center;
+    }
+
+    #placeholder{
+        width: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+    #card{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffe0edc2;
+        width: 450px;
+        height: max-content;
+        /* padding: inherit; */
+        /* border-radius: 20px; */
+        border-radius: 25px;
+        box-shadow: 0px 9px 20px 9px #44003e75;
+    }
+
+    #placeholder-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        padding: 40px;
+    }
+
+    #card-logo{
+        display: flex;
+        padding: 50px;
+    }
+
+    #details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #card-info{
+        display: flex;
+        /* flex-direction: row; */
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: baseline; */
+        align-items: center;
+    }
+
+    #card-name{
+        padding-right: 10px;
+        font-size: 64px;
+        font-family: 'Snippet', sans-serif;
+        color: black;
+        padding-bottom: 10px;
+    }
+
+    #card-name:hover{
+        color: #fc6e51;
+    }
+
+    #details-child{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 77px 0px;
+    }
+
+    @media only screen and (max-width: 374px){
+        #details-child{
+            margin: 100px 0px;
+        }
+        
+    }
+
+</style>

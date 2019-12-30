@@ -1,0 +1,254 @@
+<div id="placeholder">
+    <div id="header" class="no-select">
+        <img id="header-icon" src="assets/img/content-nav/icon/addon.png">
+        <a id="header-title">ADD-ON</a>
+    </div>
+    <div id="placeholder-2" class="no-select">
+        We all know that sometimes things just aren't enough. No more frills - here are the add-ons!
+        <div id="sub-nav" class="block">
+            <div id="sub-nav-wrap">
+                <div onclick="subnav_sel('addon', 1);" id="sub-nav-sel-1" class="sub-nav-sel transition">INTERNET</div>
+                <div onclick="subnav_sel('addon', 2);" id="sub-nav-sel-2" class="sub-nav-sel transition">CALLS</div>
+                <div onclick="subnav_sel('addon', 3);" id="sub-nav-sel-3" class="sub-nav-sel transition">SMS</div>
+            </div>
+        </div>
+    </div>
+    <div id="content-view-2" class="font-google-sans transition">
+        <!-- To be filled by JS :) -->
+    </div>
+</div>
+
+<style>
+    #content-view{
+        background-image: url(assets/img/content-view/background/addon.jpg);
+        background-position: center;
+    }
+
+    #placeholder {
+        width: -webkit-fill-available;
+        height: max-content;
+        /* background-image: url(assets/docs/plan/res/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        background-attachment: fixed; */
+    }
+
+    #header {
+        background: #fffffff2;
+        padding: 20px;
+        display: flex;
+        font-size: 27px;
+        width: -webkit-fill-available;
+        align-items: center;
+        /* position: sticky; */
+        justify-content: center;
+        top: 0;
+    }
+
+    #header-icon {
+        opacity: 0.8;
+        padding-right: 14px;
+        max-width: 25px;
+    }
+
+    #header-title {
+        font-family: 'Megrim', cursive;
+    }
+
+    #placeholder-2 {
+        width: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        display: flex;
+        flex-wrap: wrap;
+        /* padding: 40px; */
+        justify-content: center;
+        background: #fffffff2;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    #sub-nav {
+        /* background: #dd618c; */
+        /* background: #ceb5c0; */
+        /* background: #fffffff2; */
+        width: -webkit-fill-available;
+        padding: 26px;
+        padding-top: 15px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #sub-nav-wrap {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        max-width: 60%;
+        flex-grow: 1;
+    }
+
+    .sub-nav-sel {
+        /* padding: 20px 40px; */
+        padding: 15px 35px;
+        margin: 5px;
+        /* color: #ffffffcc; */
+        color: #ffffffa8;
+        background: #e91e638c;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sub-nav-sel:hover {
+        flex-grow: 1;
+        /* filter: brightness(1.5); */
+        color: white;
+    }
+
+    .sub-nav-sel.active {
+        /* background: #e91e63; */
+        background: #ec2367;
+        color: white;
+        flex-grow: 1;
+    }
+
+    #content-view-2 {
+        min-height: calc(100vh - 259px);
+        height: max-content;
+    }
+
+    @media only screen and (max-width: 639px) {
+        #placeholder{
+            background: rgba(0,0,0,0.35);
+        }
+
+        #header{
+            padding-bottom: 12px;
+        }
+
+        #placeholder-2 {
+            padding: 5px 20px 0px 20px;
+        }
+
+        #sub-nav {
+            padding: 15px 0px 0px 0px !important;
+            margin: 0px -20px;
+        }
+
+        #sub-nav-wrap {
+            flex-direction: column;
+            width: -webkit-fill-available;
+            max-width: initial;
+        }
+
+        .sub-nav-sel {
+            /* padding: 5px 40px; */
+            padding: 2px 40px;
+            margin: 0px;
+            width: -webkit-fill-available;
+            font-size: 12px;
+        }
+
+        .sub-nav-sel.active {
+            padding: 15px 40px;
+            font-size: initial;
+        }
+
+    }
+</style>
+
+<style>
+    #placeholder-3{
+        width: -webkit-fill-available;
+        height: max-content;
+    }
+
+    #placeholder-4{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .content-plan-card {
+        display: flex;
+        flex-direction: column;
+        background: rgba(0,0,0,0.35);
+        padding: 5px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .content-plan-card-head{
+        font-size: 34px;
+        padding: 14px 0px;
+        color: white;
+        text-shadow: 0px 0px 9px #92daff;
+    }
+
+    .content-plan-card-head .icon{
+        font-size: 24px;
+        padding-right: 5px;
+    }
+
+    .content-plan-card-body{
+        padding: 14px;
+        /* background: #71e7ffd9; */
+        background: #fcffe3e3;
+        color: black;
+        border-radius: 5px;
+    }
+
+    .content-plan-card-body-item {
+        padding: 7px 10px;
+    }
+
+    .content-plan-card-body-item-1{
+        font-size: 24px;
+    }
+
+    .content-plan-card-body-item-1 .icon{
+        padding-right: 5px;
+    }
+
+    .content-plan-card-body-item-2{
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .content-plan-card-foot{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .content-plan-card-foot .icon{
+        font-size: 45px;
+        padding: 10px;
+    }
+
+    @media only screen and (max-width: 639px) {
+        #placeholder-4{
+            padding: 0px;
+            justify-content: left;
+            flex-direction: row;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+        }
+
+        .content-plan-card{
+            margin: unset;
+            border-radius: unset;
+        }
+
+        .content-plan-card-body{
+            width: max-content;
+        }
+    
+    }
+</style>
